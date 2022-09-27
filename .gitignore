@@ -1,0 +1,5 @@
+# Sensitive data files
+*.params
+
+# Output files
+*.csv
