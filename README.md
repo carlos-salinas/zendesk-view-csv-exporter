@@ -1,4 +1,4 @@
-# Zendesk View CSV Import
+# Zendesk View CSV Export
 
 This script imports into CSV file the list of issues part of a Zendesk view using the API:
 
