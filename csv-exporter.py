@@ -23,7 +23,7 @@ while url:
 	url = page_data['next_page']
 
 # Initialize rows with an initial header row
-rows = [('Ticket ID', 'Subject', 'Description', 'Organization', 'Created', 'Priority', 'Status', 'URL')]
+rows = [('Ticket ID', 'Subject', 'Description', 'Organization', 'Created', 'Priority', 'Status', 'Satisfaction', 'URL')]
 
 # Define a row per ticket and append
 for ticket in view_tickets:
@@ -45,7 +45,8 @@ for ticket in view_tickets:
 	    ticket['created_at'],
 	    ticket['priority'],
 	    ticket['status'],
-	       f'https://support.zendesk.com/agent/tickets/{ticket["id"]}'
+	    ticket['satisfaction_rating']['score'],
+	       f'https://mendixsupport.zendesk.com/agent/tickets/{ticket["id"]}'
 	) 
 	rows.append(row)
 
